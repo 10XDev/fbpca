@@ -1,0 +1,22 @@
+# Generated BUILD file for lib/python/fbpca
+py_library(
+    name = "fbpca",
+    srcs = [
+        "__init__.py",
+        "fbpca.py",
+    ],
+    data = ["__init__.py"],
+    imports = [".."],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@anaconda//:numpy",
+        "@anaconda//:scipy",
+    ],
+)
+
+py_library(
+    name = "setup",
+    srcs = ["setup.py"],
+    data = ["__init__.py"],
+    visibility = ["//visibility:private"],
+)
