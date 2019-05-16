@@ -18,5 +18,6 @@ py_library(
     name = "setup",
     srcs = ["setup.py"],
     data = ["__init__.py"],
+    imports = [".."],
     visibility = ["//visibility:private"],
 )
