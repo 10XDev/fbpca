@@ -2,7 +2,6 @@
 py_library(
     name = "fbpca",
     srcs = [
-        "__init__.py",
         "fbpca.py",
     ],
     data = ["__init__.py"],
@@ -17,7 +16,10 @@ py_library(
 py_library(
     name = "setup",
     srcs = ["setup.py"],
-    data = ["__init__.py"],
+    data = [
+        "__init__.py",
+        ":fbpca",
+    ],
     imports = [".."],
     visibility = ["//visibility:private"],
 )
